@@ -78,11 +78,11 @@ namespace Contacts_project
 
                 Console.WriteLine($"Nuevo Email {c.Email}");
                 string newEmail = Console.ReadLine();
-                if (!string.IsNullOrEmpty(newEmail)) c.Name = newEmail;
+                if (!string.IsNullOrEmpty(newEmail)) c.Email = newEmail;
 
-                Console.WriteLine($"Nueva Dirección {c.Name}");
+                Console.WriteLine($"Nueva Dirección {c.Address}");
                 string newAddress = Console.ReadLine();
-                if (!string.IsNullOrEmpty(newName)) c.Name = newAddress;
+                if (!string.IsNullOrEmpty(newAddress)) c.Address = newAddress;
 
                 Console.WriteLine("Contacto actualizado.");
             }
@@ -99,7 +99,7 @@ namespace Contacts_project
             int idSeleccionado;
             if (int.TryParse(Console.ReadLine(), out idSeleccionado) && contactos.ContainsKey(idSeleccionado))
             {
-                Console.WriteLine("Seguro que desea eliminar? 1. Sí, 2. No")
+                Console.WriteLine("Seguro que desea eliminar? 1. Sí, 2. No");
                 int opcion = Convert.ToInt32(Console.ReadLine());
                 if (opcion == 1)
                 {
