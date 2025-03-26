@@ -35,7 +35,7 @@ while (running)
         case 4:
             agenda.EditContact();
             break;
-        case 5: //esto es intencional, no importa el orden en que pongan los cases, pero, traten de ser siempre lo mas ordenados posible
+        case 5:
             agenda.DeleteContact();
             break;
         case 6:

@@ -28,7 +28,7 @@ namespace Contacts_project
             string address = Console.ReadLine();
 
             contactos.Add(id, new Contacto(id, name, phone, email, address));
-            Console.WriteLine("Contacto agregado\n.");
+            Console.WriteLine("Contacto agregado.\n");
         }
 
         public void ViewContact()
@@ -45,7 +45,7 @@ namespace Contacts_project
 
         public void SearchContact()
         {
-            Console.WriteLine("Digite un Id de Contacto Para Mostrar: ");
+            Console.WriteLine("Digite un Id de Contacto para Mostrar: ");
             int idSeleccionado;
             if (int.TryParse(Console.ReadLine(), out idSeleccionado) && contactos.ContainsKey(idSeleccionado))
             {
@@ -54,7 +54,7 @@ namespace Contacts_project
             }
             else
             {
-                Console.WriteLine("El contacto no existe");
+                Console.WriteLine("El contacto no existe.");
             }
         }
 
@@ -68,19 +68,19 @@ namespace Contacts_project
             {
                 var c = contactos[idSeleccionado];
 
-                Console.WriteLine($"Nuevo Nombre {c.Name}");
+                Console.WriteLine($"Nuevo Nombre: {c.Name}");
                 string newName = Console.ReadLine();
                 if (!string.IsNullOrEmpty(newName)) c.Name = newName;
 
-                Console.WriteLine($"Nuevo Teléfono {c.Phone}");
+                Console.WriteLine($"Nuevo Teléfono: {c.Phone}");
                 string newPhone = Console.ReadLine();
                 if (!string.IsNullOrEmpty(newPhone)) c.Phone = newPhone;
 
-                Console.WriteLine($"Nuevo Email {c.Email}");
+                Console.WriteLine($"Nuevo Email: {c.Email}");
                 string newEmail = Console.ReadLine();
                 if (!string.IsNullOrEmpty(newEmail)) c.Email = newEmail;
 
-                Console.WriteLine($"Nueva Dirección {c.Address}");
+                Console.WriteLine($"Nueva Dirección: {c.Address}");
                 string newAddress = Console.ReadLine();
                 if (!string.IsNullOrEmpty(newAddress)) c.Address = newAddress;
 
@@ -88,7 +88,7 @@ namespace Contacts_project
             }
             else
             {
-                Console.WriteLine("El contacto no existe");
+                Console.WriteLine("El contacto no existe.");
             }
         }
 
@@ -109,7 +109,7 @@ namespace Contacts_project
             }
             else
             {
-                Console.WriteLine("Contacto no encontrado");
+                Console.WriteLine("Contacto no encontrado.");
             }
         }
      }
