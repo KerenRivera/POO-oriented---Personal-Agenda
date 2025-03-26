@@ -1,26 +1,25 @@
-﻿Console.WriteLine("Mi Agenda Perrón");
+﻿using Contacts_project;
 
-Console.WriteLine("Bienvenido a tu lista de contactes");
+Console.WriteLine("Mi Agenda Perrón");
 
-Dictionary<int, string> names = new Dictionary<int, string>();
-Dictionary<int, string> phones = new Dictionary<int, string>();
-Dictionary<int, string> emails = new Dictionary<int, string>();
-List<string> addresses = new List<string>();
-List<int> ids = new List<int>();
+Console.WriteLine("Bienvenido a tu lista de contactos");
 
+Agenda agenda = new Agenda();
 bool running = true;
+
+
 while (running)
 {
 
-    Console.Write("1. Agregar Contacto      ");
-    Console.Write("2. Ver Contactos     ");
-    Console.Write("3. Buscar Contactos      ");
-    Console.Write("4. Modificar Contacto        ");
-    Console.Write("5. Eliminar Contacto     ");
-    Console.WriteLine("6. Salir");
+    Console.WriteLine("1. Agregar Contacto   2. Ver Contacto   3. Buscar Contacto   4. Editar Contacto   5. Eliminar Contacto   6. Salir");
     Console.Write("Elige una opción: ");
 
-    int choice = Convert.ToInt32(Console.ReadLine());
+    int choice;
+    if (!int.TryParse(Console.ReadLine(), out choice))
+    {
+        Console.WriteLine("Opcion inválida");
+        continue;
+    }
 
     switch (choice)
     {
